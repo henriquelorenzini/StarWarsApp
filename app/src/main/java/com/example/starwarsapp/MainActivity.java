@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
     Button buttonStart;
@@ -12,16 +13,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.loading_page);
-    public void onClick (Button);
-         buttonStart =  findViewById(R.id.buttonStart);
+        setContentView(R.layout.activity_loading);
 
-         buttonStart.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 Intent it = new Intent(MainActivity.this, homePage.this);
-                 startActivity(it);
-             }
-         });
+        buttonStart = findViewById(R.id.buttonStart);
+        }
+    public void onClickStart  (View view){
+
+        buttonStart.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent it = new Intent(MainActivity.this, HomePage.class);
+                startActivity(it);
+            }
+        });
     }
 }
